@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-2"/>
+    <title>Projekt IIS</title>
+    <style type="text/css">
+    	table { border-collapse: collapse; }
+    	td, th { border: 1px solid black; padding: 0.3em 0.5em; text-align: left; }
+    	dt { font-weight: bold; margin-top: 0.5em; }
+    </style>
+</head>
+<body>
+
+<!-- Zkontrolujte prosím nastavení kódování v hlavièce dokumentu 
+     podle pou¾itého editoru -->
+
+<h1>Nemocnica</h1> <!-- Nahradte názvem svého zadání -->
+
+<dl>
+	<dt>Autori</dt>
+	<dd>Tomáš Zubrik<!-- Nahraïte skuteèným jménem a e-mailem autora a popisem èinnosti -->
+	    <a href="mailto:xzubri00@stud.fit.vutbr.cz">xzubri00@stud.fit.vutbr.cz</a> -
+		správa užívateľov, užívateľské rozhranie
+	</dd>
+	<dd>Šimon Stupinský <!-- Nahraïte skuteèným jménem a e-mailem autora a popisem èinnosti -->
+	    <a href="mailto:xstupi00@stud.fit.vutbr.cz">xstupi00@stud.fit.vutbr.cz</a> - 
+		databázový subsystém, databázový script
+	</dd>
+	<dt>URL aplikácie</dt>
+	<dd><a href="http://www.stud.fit.vutbr.cz/~xzubri00/IIS">http://www.stud.fit.vutbr.cz/~xzubri00/IIS</a></dd>
+</dl>
+
+<h2>Užívatelia systému pre testovanie</h2>
+<table>
+<tr><th>Login</th><th>Heslo</th><th>Rola</th></tr>
+<tr><td>admin</td><td>admin</td><td>Administrátor</td></tr>
+<tr><td>doc</td><td>doc</td><td>Doktor</td></tr>
+<tr><td>nurse</td><td>nurse</td><td>Sestra</td></tr>
+</table>
+
+<h2>Implementácia</h2>
+
+<p>Diagram prípadov použitia, z ktorého sme vychádzali bol rozšírený a niektoré prípady použitia boli pridelené inej užívateľskej role. Uvažujeme jednoduchý systém, ktorý má jedného administrátora vystupujúceho ako HR(Human Resources). Užívateľské role doktora a sestričky majú neurčený počet možných užívateľov. Z databázy bola odstránená entitná množina Obligation(závazok na oddelení), ktorá podľa nás nedávala zmysel a komplikovala celú funkčnosť.</p>
+
+<dl>
+	<dt>Aplikácia sa spúšťa skriptom index.php, ktorá spúšťa ďalšie skripty:</dt>
+	<dd>index.php - hlavný skript(stránka), do ktorej sa užívateľ prihlási a vykonáva ďalšie akcie</dd>
+	<dd>login.php - prihlasovacie okno</dd>
+	<dd>server.php - serverová časť IS</dd>
+	<dd>add-doctor.php - pridanie doktora</dd>
+	<dd>add-nurse.php - pridanie sestry</dd>
+	<dd>add-department.php - pridanie oddelenia</dd>
+	<dd>add-medication.php - pridanie lieku</dd>
+	<dd>add-patient.php - pridanie pacienta</dd>
+	<dd>add-admofmeds.php - pridanie podavania liekov</dd>
+	<dd>add-examination.php - pridanie vyšetrenia</dd>
+	<dd>add-hospitalization.php - pridanie hospitalizácie</dd>
+	<dd>admin-actions-department.php - edit/delete oddelenia</dd>
+	<dd>admin-actions-medication.php - edit/delete liek</dd>
+	<dd>admin-actions-doctor.php - edit/delete/dismiss doktora</dd>
+	<dd>admin-actions-nurse.php - edit/delete/dismiss sestru</dd>
+	<dd>doctor-actions-records.php - add/edit/show záznamy o hospitalizácii, vyšetrení a podávaní liekov</dd>
+	<dd>doctor-actions-patient.php - edit/delete/show profile pacienta</dd>
+	<dd>form-person.php, form-person-modal.php, form-user.php, form-user-modal.php - subskripty pre vytváranie a overovanie záznamov o osobe a užívateľovi</dd>
+</dl>
+
+<dl>
+	<dt>Ďalšie súbory:</dt>
+	<dd>db.sql - databázový skript</dd>
+	<dd>style.css - CSS3 style na vhľad stránok</dd>
+	<dd>add-scripts-and-css.php - ďalšie využité externé CSS, Bootstrap, jQuery, jQuery-UI, jQuery-DataTables a JavaScript</dd>
+
+
+</dl>
+
+<h2>Inštalácia</h2>
+<ul>
+<li>Všetky súbory skopírujte na webový server</li>
+	<ul>
+		<li>Pre spustenie na študentských stránkach použite príkazy chmod 0755 ~/WWW/
+a chmod 0644 ~/WWW/index.php</li>
+	</ul>
+
+<li>Softwarové požiadavky aplikácie</li>
+	<ul>
+		<li>PHP5</li>
+		<li>MySQL5</li>
+	</ul>
+<li>Na inicializáciu datábazy a naplnenie dátami je vhodné použiť webovú aplikáciu phpAdmin na serveri eva.fit.vutbr.cz - priložený databázový skript db.sql</li>
+</ul>
+
+<h2>Známé problémy</h2>
+<p>Projekt bol vypracovaný na základe použitia use-case diagramu a logického uvažovania. Veci, ktoré nedávali zmysel v use-diagrame, boli pozmenené a boli pridané nové. Projekt by podľa zadania mal spĺňať všetky požiadavky na funkčnosť, praktičnosť a zachovanie konzistencie dát. Pre nedostatok času sa nám nepodarilo dokončiť profily doktorov a sestier, a že doktor ani sestra sa nemôže v databáze vyskytnúť ako pacient.</p>
+
+</body>
+</html>

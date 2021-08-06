@@ -1,0 +1,249 @@
+
+.btn-login {
+  width: 50%;
+  margin: 50px auto 0px 50px;
+}
+
+.login-form {
+  width: 50%;
+  margin: 0px auto 0px auto;
+  padding: 20px;
+  padding-bottom: 50px;
+  border: 1px solid #337ab7;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.form-header {
+  width: 50%;
+  margin: 50px auto 0px auto;
+  color: white;
+  background: #337ab7;
+  text-align: center;
+  border: 1px solid #337ab7;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.table-primary {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.table-primary th {
+  text-align: center;
+  padding: 12px;
+}
+
+.table-primary td {
+  text-align: center;
+  padding: 12px;
+}
+
+.table-primary tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table-primary tr.header, .table-primary tr:hover {
+  background-color: #f1f1f1;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.form-width {
+	max-width: 600px;
+}
+
+.form-padding {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.section-caption {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.margin-bottom {
+	margin-bottom: 100px;
+}
+
+.required-field {
+  color: red;
+  font-size: 16px;
+}
+
+.modal-delete {
+  color: crimson;
+  border: 1px solid crimson;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+/* USER PROFILE PAGE */
+ .card {
+    margin-top: 20px;
+    padding: 30px;
+    background-color: rgba(214, 224, 226, 0.2);
+    -webkit-border-top-left-radius:5px;
+    -moz-border-top-left-radius:5px;
+    border-top-left-radius:5px;
+    -webkit-border-top-right-radius:5px;
+    -moz-border-top-right-radius:5px;
+    border-top-right-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #d9edf7;
+}
+.card.hovercard .card-background {
+    height: 130px;
+}
+
+.card.hovercard .useravatar {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .useravatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.card.hovercard .card-info {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+}
+.card.hovercard .card-info .card-title {
+    padding:0 5px;
+    font-size: 20px;
+    line-height: 1;
+    color: #262626;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.card.hovercard .card-info {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #737373;
+    text-overflow: ellipsis;
+}
+.card.hovercard .bottom {
+    padding: 0 20px;
+    margin-bottom: 17px;
+}
+
+.tdleft td {
+  text-align: left;
+}
+
+.thleft th {
+  text-align: left;
+}
+
+
+.setfilter {
+  margin:5px;
+}
+
+
+
+.dataTables_filter {
+display: none; 
+}
+
+.datatable td, .datatable th {
+  text-align: left;
+}
+
+
+thead input {
+  width: 100%;
+  padding: 5px 12px 5px 12px;
+  cursor: pointer;
+}
+
+thead input:hover {
+  background-color: #d9edf7;
+}
+
+.patient-info td, .patient-info th {
+  padding-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/*tooltip*/
+.tool-tip {
+  display: inline-block;
+}
+
+.tool-tip [disabled] {
+  pointer-events: none;
+}
